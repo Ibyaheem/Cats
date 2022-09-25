@@ -1,6 +1,6 @@
-# lol
+# Cats
 
-A new Flutter project.
+An Adoption App.
 
 ## Getting Started
 

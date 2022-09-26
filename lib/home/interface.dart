@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lol/interface/interface.dart';
+import 'package:lol/login/login.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class Interface extends StatelessWidget {
+  const Interface({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
-                      color: Colors.brown,
+                      color: Colors.pink[200],
                     ),
                   ),
                   SizedBox(
@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20.0,
-                        color: Colors.brown,
+                        color: Colors.pink[200],
                       ),
                     ),
                   ),
@@ -49,14 +49,14 @@ class Home extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Interface()),
+                        MaterialPageRoute(builder: (context) => LoginScreen()),
                       );
                     },
                     child: Container(
                       width: 100.0,
                       height: 50.0,
                       decoration: BoxDecoration(
-                        color: Colors.brown,
+                        color: Colors.pink[200],
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Padding(

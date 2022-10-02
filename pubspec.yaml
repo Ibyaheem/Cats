@@ -66,6 +66,9 @@ flutter:
      - assets/cat1.png
      - assets/cat2.png
      - assets/happy.png
+     - assets/clock.png
+     - assets/calendar.png
+     - assets/clock1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

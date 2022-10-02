@@ -80,9 +80,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 20.0,
                 ),
                 Text(
-                  'Hey!',
+                  'Welcome',
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink[200],
+                  ),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  'Back!',
+                  style: TextStyle(
+                    fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.pink[200],
                   ),
@@ -160,55 +171,57 @@ class _LoginScreenState extends State<LoginScreen> {
                           SizedBox(
                             height: 15.0,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 30.0,
-                            ),
-                            child: TextFormField(
-                              cursorColor: Colors.white,
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                              controller: usernameController,
-                              keyboardType: TextInputType.name,
-                              onFieldSubmitted: (value) {
-                                print(value);
-                              },
-                              onChanged: (value) {
-                                print(value);
-                              },
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return 'username must not be empty';
-                                } else {
-                                  return null;
-                                }
-                              },
-                              decoration: InputDecoration(
-                                labelText: 'Name',
-                                labelStyle: TextStyle(
-                                  color: Colors.white,
-                                ),
-                                prefixIcon: Icon(
-                                  Icons.person,
-                                  color: Colors.white,
-                                ),
-                                border: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                      width: 3, color: Colors.white),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                      width: 3, color: Colors.white),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
+                          //Name form field
+
+                          // Padding(
+                          //   padding: const EdgeInsets.symmetric(
+                          //     horizontal: 30.0,
+                          //   ),
+                          //   child: TextFormField(
+                          //     cursorColor: Colors.white,
+                          //     style: TextStyle(
+                          //       color: Colors.white,
+                          //     ),
+                          //     controller: usernameController,
+                          //     keyboardType: TextInputType.name,
+                          //     onFieldSubmitted: (value) {
+                          //       print(value);
+                          //     },
+                          //     onChanged: (value) {
+                          //       print(value);
+                          //     },
+                          //     validator: (value) {
+                          //       if (value!.isEmpty) {
+                          //         return 'username must not be empty';
+                          //       } else {
+                          //         return null;
+                          //       }
+                          //     },
+                          //     decoration: InputDecoration(
+                          //       labelText: 'Name',
+                          //       labelStyle: TextStyle(
+                          //         color: Colors.white,
+                          //       ),
+                          //       prefixIcon: Icon(
+                          //         Icons.person,
+                          //         color: Colors.white,
+                          //       ),
+                          //       border: OutlineInputBorder(
+                          //         borderSide: const BorderSide(
+                          //             width: 3, color: Colors.white),
+                          //         borderRadius: BorderRadius.circular(15),
+                          //       ),
+                          //       focusedBorder: OutlineInputBorder(
+                          //         borderSide: const BorderSide(
+                          //             width: 3, color: Colors.white),
+                          //         borderRadius: BorderRadius.circular(15),
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
+                          // SizedBox(
+                          //   height: 15.0,
+                          // ),
                           Padding(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 30.0,
@@ -269,6 +282,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
+                          ),
+                          Row(
+                            children: [],
                           ),
                           SizedBox(
                             height: 100.0,

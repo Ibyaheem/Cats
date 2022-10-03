@@ -9,72 +9,81 @@ class Interface extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(50.0),
-              child: Column(
-                children: [
-                  Text(
-                    'Make a new friend!',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.0,
-                      color: Colors.pink[200],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 90.0),
-                    child: Text(
-                      'Adopt a pet today.',
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/kitty.png'),
+              fit: BoxFit.cover,
+              filterQuality: FilterQuality.high,
+            ),
+          ),
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Make a new friend!',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
-                        color: Colors.pink[200],
+                        fontSize: 40.0,
+                        color: Colors.white,
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Positioned(
-              bottom: 50.0,
-              left: 245.0,
-              child: Stack(
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginScreen()),
-                      );
-                    },
-                    child: Container(
-                      width: 100.0,
-                      height: 50.0,
-                      decoration: BoxDecoration(
-                        color: Colors.pink[200],
-                        borderRadius: BorderRadius.circular(20.0),
+                    SizedBox(
+                      height: 30.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 175.0),
+                      child: Text(
+                        'Adopt a pet today.',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.brown,
+                        ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Text(
-                          "Let's go!",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                bottom: 50.0,
+                left: 245.0,
+                child: Stack(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()),
+                        );
+                      },
+                      child: Container(
+                        width: 120.0,
+                        height: 50.0,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Let's Go!",
+                            style: TextStyle(
+                              color: Colors.brown,
+                              fontSize: 20.0,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

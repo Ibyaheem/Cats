@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lol/home/lectures.dart';
+
+import 'home/interface.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.pink,
       ),
-      home: Lectures(),
+      home: Interface(),
       debugShowCheckedModeBanner: false,
     );
   }
